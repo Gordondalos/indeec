@@ -20,10 +20,12 @@ $(document).ready(function() {
 // Прослушка события изменения ориентации
 	mql.addListener(function(m) {
 		if(m.matches) {
-			window.reload();
+			location.reload();
+			$("#bg").css("height",wh);
 		}
 		else {
-			window.reload();
+			location.reload();
+			$("#bg").css("height",wh);
 		}
 	});
 
@@ -44,18 +46,20 @@ $(document).ready(function() {
 	var unitHeight;
 	var points;
 
+
+
 	function onLoad()
 	{
 		var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 		svg.setAttribute('width',window.innerWidth);
-		svg.setAttribute('height',window.innerHeight);
+		svg.setAttribute('height',$(document).outerHeight());
 		document.querySelector('#bg').appendChild(svg);
 
-		var unitSize = (window.innerWidth+window.innerHeight)/20;
+		var unitSize = (window.innerWidth+window.outerHeight)/20;
 		numPointsX = Math.ceil(window.innerWidth/unitSize)+1;
-		numPointsY = Math.ceil(window.innerHeight/unitSize)+1;
+		numPointsY = Math.ceil($(document).outerHeight()/unitSize)+1;
 		unitWidth = Math.ceil(window.innerWidth/(numPointsX-1));
-		unitHeight = Math.ceil(window.innerHeight/(numPointsY-1));
+		unitHeight = Math.ceil($(document).outerHeight()/(numPointsY-1));
 
 		points = [];
 
