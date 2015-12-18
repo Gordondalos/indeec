@@ -30,10 +30,12 @@ $(document).ready(function() {
 	});
 
 
-	$(window).resize(function(){
-		$("#footer").stickyFooter();
-	});
-	$("#footer").stickyFooter();
+$('.nidden_nav').click(function(){
+	$('.hiddnes_ul').addClass('ul_vertical');
+	$('.hiddnes_ul').slideToggle();
+});
+
+
 
 
 // полигоны

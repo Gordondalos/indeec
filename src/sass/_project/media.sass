@@ -9,20 +9,27 @@
 ////	time-o-transition: all .5s ease
 ////	timetransition: all .5s ease time
 //
-////@media only screen and (max-width : 1200px)
-//
+@media only screen and (max-width : 1200px)
+	.logo-wrapper
+		margin-top: 20%
 //
 //
 ///* Medium Devices, Desktops */
-////@media only screen and (max-width : 992px)
-//
-//
-//
-///* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 992px)
+	.logo-wrapper
+		margin-top: 30%
 	.wraper-down-mwnu-2
 		ul
 			width: 100%
+	//
+//
+///* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.nidden_nav
+		display: block
+	.wraper-down-mwnu-2
+		.hiddnes_ul
+			display: none
 
 //	/*Disable Animation on Mobile Devices*/
 //	////.animated
@@ -45,9 +52,29 @@
 //	//	//-ms-animation: none !important
 //	//	//animation: none !important
 //
+
+
+@media only screen and (max-width : 570px)
+	.logo-wrapper
+		margin-top: 40%
+	.down-ul-wrapper
+		display: inline-block
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+
+		li
+			display: block
+			float: none
+			margin: 10px auto
+
 ///* Extra Small Devices, Phones */
-////@media only screen and (max-width : 480px)
-//	/**/
+@media only screen and (max-width : 480px)
+	.wrap-header span
+		font-size: 14px
+		padding: 10px
+	.logo-wrapper
+		margin-top: 50%
 //
 ///* Custom, iPhone Retina */
 ////@media only screen and (max-width : 320px)
