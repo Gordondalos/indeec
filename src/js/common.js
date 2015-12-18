@@ -1,15 +1,37 @@
 $(document).ready(function() {
 
-	var wh= $(window).height();
+	var wh= $(document).outerHeight(true);
 	$(".section_1").css("height",wh);
+	$(".section_0").css("height",wh);
+	$("#bg").css("height",wh);
 
-	$('input').focus(function(){
-		$(this).toggleClass("input-width")
+	$(window).resize(function(){
+
+		var wh= $(document).outerHeight(true);
+		$("#bg").css("height",wh);
+		$(".section_1").css("height",wh);
+		$(".section_0").css("height",wh);
 	});
 
-	$('input').focusout(function(){
-		$(this).toggleClass("input-width")
+
+	var mql = window.matchMedia("(orientation: portrait)");
+
+
+// Прослушка события изменения ориентации
+	mql.addListener(function(m) {
+		if(m.matches) {
+			window.reload();
+		}
+		else {
+			window.reload();
+		}
 	});
+
+
+	$(window).resize(function(){
+		$("#footer").stickyFooter();
+	});
+	$("#footer").stickyFooter();
 
 
 // полигоны
